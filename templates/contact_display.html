@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        <script src="https://kit.fontawesome.com/1e4338f9da.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </style>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+{% include 'nav.html' %}
+<center>
+    <form>
+    <table border="3">
+        <tr>
+            <th colspan="2">CONTACT DETAILS</th>
+        </tr>
+        <tr>
+            <td>IMAGE</td>
+            <td><img height="200 width=200" src="{% static image%}"></td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>{{mid}}</td>
+        </tr>
+        <tr>
+            <td>MANAGER NAME &nbsp; &nbsp;&nbsp;</td>
+            <td>{{name}}</td>
+        </tr>
+        <tr>
+            <td>CONTACT</td>
+            <td>{{ph_no}}</td>
+        </tr>
+        <tr>
+            <td>LOCATION</td>
+            <td>{{location}}</td>
+        </tr>
+        <tr>
+            <td>OPENING TIME</td>
+            <td>{{open_tym}}</td>
+        </tr>
+        <tr>
+            <td>CLOSING TIME</td>
+            <td>{{close_tym}}</td>
+        </tr>
+        <tr>
+            <td>
+                <a class="btn btn-primary" href="http://127.0.0.1:8000/foodhut_app/displayedit/{{id}}">EDIT</a><br>
+            </td>
+        </tr>
+    </table>
+</form>
+</center>
+{% include 'foot.html' %}
+
+
+
+
+
+
+</body>
+</html>

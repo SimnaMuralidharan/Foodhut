@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+  <table border="1" align="center">
+    <tr>
+      <td>
+        <label>ID</label>
+        <input type="number" name="rid" value="{{ dis.rid }}">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label> MANAGER NAME</label>
+        <input type="text" name="rname" value="{{ dis.rname }}">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>CONTACT NO</label>
+        <input type="text" name="rno" value="{{ dis.rno }}">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>LOCATION</label>
+        <input type="text" name="rloc" value="{{ dis.rloc }}">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>OPENING TYM</label>
+        <input type="time" name="ropen" value="{{ dis.ropen }}">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>CLOSING TYM</label>
+        <input type="time" name="rclose" value="{{ dis.rclose }}">
+      </td>
+    </tr>
+    <tr>
+      {% if dis.rimage %}
+      <td>
+           <img src="{% static li %}" width="200px" height="200px">
+      </td>
+      {% endif %}
+      <td>Image<input type="file" name="rimage"></td>
+    </tr>
+    <tr>
+      <td><button type="submit">Update</button> </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
+</body>
+</html>

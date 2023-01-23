@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+  <table border="1" align="center">
+    <tr>
+      <td>
+        <label>Item Name</label>
+        <input name="nitem" value="{{ veg.nitem }}">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label> Price</label>
+        <input name="nprice" value="{{ veg.nprice }}">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Description</label>
+        <input name="ndes" value="{{ veg.ndes }}">
+      </td>
+    </tr>
+    <tr>
+      {% if veg.nimage %}
+      <td>
+           <img src="/static/non_veg/{{li}}" width="200px" height="200px">
+      </td>
+      {% endif %}
+      <td>Image<input type="file" name="nimage"></td>
+    </tr>
+    <tr>
+      <td><button type="submit">Update</button> </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
+</body>
+</html>

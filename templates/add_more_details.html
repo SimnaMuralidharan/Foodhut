@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b114d8de0c.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <table border="1" align="center">
+        <tr>
+            <td>
+                <label>restaurent image</label>
+                <input type="file" name="rimage">
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <label>restaurent id</label>
+                <input type="number" name="rid">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>manager name</label>
+                <input type="text" name="rname">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>contact number</label>
+                <input type="number" name="rno">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>location</label>
+                <input type="text" name="rloc">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>opening tym</label>
+                <input type="time" name="ropen">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>closing tym</label>
+                <input type="time" name="rclose">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" class="btn btn-success"> upload</button>
+            </td>
+        </tr>
+
+
+
+
+
+
+
+    </table>
+</form>
+
+</body>
+</html>
